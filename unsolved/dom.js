@@ -6,6 +6,8 @@ const $ = function (selector) {
       }
     }
     
+
+
     const html = function(content){
       for (let i = 0; i < nodeList.length; i++) {
         nodeList[i].innerHTML = content;
@@ -69,6 +71,19 @@ const $ = function (selector) {
 
     }
 
+    const view = function(){
+      $('.card').show()
+    }
+
+    const delName = function(){
+      name = $('#name').val();
+      for (let i = 0; i < nodeList.length; i++){
+        if (employeeList[i].name === name);
+        employeeList.splice(i,1);
+      }
+  }
+ 
+   }  
     return {
       text: text,
       html: html,
@@ -83,5 +98,6 @@ const $ = function (selector) {
       show: show,
       hide: hide
     };
-  }
-  Colla
+  
+
+  
